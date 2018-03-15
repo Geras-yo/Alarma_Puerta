@@ -1,5 +1,5 @@
 //--------------------------------------------------
-//Declara puertos de entradas y salidas y variables
+//Declaracion de puertos de entradas y salidas y variables
 //--------------------------------------------------
 int contacto = 2; //Pin asignado al reed switch
 const int led_naranja = 8;
@@ -18,15 +18,15 @@ void setup() // Se ejecuta cada vez que el Arduino se inicia
 //------------------------------------
 //Funcion ciclicla
 //------------------------------------
-void loop() // Esta funcion se mantiene ejecutando
+void loop()
 {
-  // Si el iman se acerca al reed switch
+  // Si el iman esta cerca al reed switch
   if (digitalRead(contacto) == LOW) {
     //Mantiene apagados los leds
     digitalWrite(led_naranja, LOW);
     digitalWrite(led_rojo, LOW);
     digitalWrite(led_azul, LOW);
-    // Si el iman esta lejos del reed switch
+    // De otra forma si el iman esta lejos del reed switch
   } else {
     //Alarma encendida
     for (int a = 0; a < 10; a++) {
@@ -43,7 +43,6 @@ void loop() // Esta funcion se mantiene ejecutando
       digitalWrite(led_azul, LOW); //Apaga el LED
       delay(50); //Tiempo*/
     }
-
   }
 }
 //Fin del programa
